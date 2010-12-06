@@ -1,0 +1,26 @@
+<% title "Edycja agenta" %>
+<h1>Edycja agenta</h1>
+<%= link_to 'Pokaż', @agent %>
+<% form_for(@agent) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Nazwa %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :belief %><br />
+    <%= f.text_field :belief %>
+  </p>
+  <p>
+    <%= f.label :disbelief %><br />
+    <%= f.text_field :disbelief %>
+  </p>
+  <p>
+    <%= f.label :uncertainty %><br />
+    <%= f.text_field :uncertainty %>
+  </p>
+  <p>
+    <%= f.submit 'Aktualizuj agenta' %>
+  </p>
+<% end %>

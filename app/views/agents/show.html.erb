@@ -1,0 +1,21 @@
+<% title @agent.name %>
+<%= link_to 'Edytuj', edit_agent_path(@agent) %>
+<p>
+  <b>Nazwa:</b>
+  <%=h @agent.name %>
+</p>
+
+<p>
+  <b>Belief:</b>
+  <%=h @agent.belief %>
+</p>
+
+<p>
+  <b>Disbelief:</b>
+  <%=h @agent.disbelief %>
+</p>
+
+<p>
+  <b>Uncertainty:</b>
+  <%=h @agent.uncertainty %>
+</p>

@@ -1,0 +1,29 @@
+<p>Opinia dla uslugi zlozonej z uslug:
+<% @complex_service.services.each do |service| 
+	service.opinions.each do |opinion|%>
+	usluga <%=service.name%>: (<%=opinion.belief%>, <%=opinion.disbelief%>, <%=opinion.uncertainty%>>) (agent <%=opinion.agent.name%>: <<%=opinion.agent.belief%>, <%=opinion.agent.disbelief%>, <%=opinion.agent.uncertainty%>>); 
+	<%end
+end %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @complex_service.name %>
+</p>
+
+<p>
+  <b>Belief:</b>
+  <%=h @opinion.belief %>
+</p>
+
+<p>
+  <b>Disbelief:</b>
+  <%=h @opinion.disbelief %>
+</p>
+
+<p>
+  <b>Uncertainty:</b>
+  <%=h @opinion.uncertainty %>
+</p>
+
+<%= link_to 'Back', complex_services_path %>

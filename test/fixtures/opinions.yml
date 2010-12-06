@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  agent_id: 1
+  service_id: 1
+  belief: 1.5
+  disbelief: 1.5
+  uncertainty: 1.5
+
+two:
+  agent_id: 1
+  service_id: 1
+  belief: 1.5
+  disbelief: 1.5
+  uncertainty: 1.5

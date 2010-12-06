@@ -1,0 +1,17 @@
+<p>Wynik koniunkcji opinii o usłudze <%=@opinion.service_id%> (<<%=@opinion.belief %>, <%=@opinion.disbelief %>, <%=@opinion.uncertainty %>>) z opinia <<%=@second.belief %>, <%=@second.disbelief %>, <%=@second.uncertainty %>></p>
+<p>
+  <b>Belief:</b>
+  <%=h @conjunction.belief %>
+</p>
+
+<p>
+  <b>Disbelief:</b>
+  <%=h @conjunction.disbelief %>
+</p>
+
+<p>
+  <b>Uncertainty:</b>
+  <%=h @conjunction.uncertainty %>
+</p>
+
+<%= link_to 'Back', opinions_path %>

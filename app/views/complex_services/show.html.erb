@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @complex_service.name %>
+</p>
+
+<p>
+  <b>Belief:</b>
+  <%=h @complex_service.belief %>
+</p>
+
+<p>
+  <b>Disbelief:</b>
+  <%=h @complex_service.disbelief %>
+</p>
+
+<p>
+  <b>Uncertainty:</b>
+  <%=h @complex_service.uncertainty %>
+</p>
+
+
+<%= link_to 'Edit', edit_complex_service_path(@complex_service) %> |
+<%= link_to 'Back', complex_services_path %>

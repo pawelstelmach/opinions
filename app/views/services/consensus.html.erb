@@ -1,0 +1,7 @@
+<p>Konsensus dla usługi <%=@service.name%></p>
+
+<% @service.opinions.each do |opinion| %>
+	<p><%=opinion.agent_id%>, <<%=opinion.belief%>, <%=opinion.disbelief%>, <%=opinion.uncertainty%>>  -- a po rekomendacji agenta (<<%=opinion.agent.belief %>, <%=opinion.agent.disbelief %>, <%=opinion.agent.uncertainty %>>): <<%=opinion.recommend.belief%>, <%=opinion.recommend.disbelief%>, <%=opinion.recommend.uncertainty%>></p>
+<% end %>
+
+<p>konsensus: <%=@consensus.belief%>, <%=@consensus.disbelief%>, <%=@consensus.uncertainty%> (consensus nie jest zdefiniowany dla opinii bez niepewno�ci -- z uncertainty = 0)</p>

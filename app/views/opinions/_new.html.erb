@@ -1,0 +1,29 @@
+<h1>Nowa opinia</h1>
+
+<% form_for(new_opinion) do |f| %>
+  <%= f.error_messages %>
+
+  <p>  	
+    <%= f.label :Agent %><br />
+    <%= f.select :agent_id, @agents_list %>
+  </p>
+  <p>
+    <%= f.label :Usługa %><br />
+	<%= f.select :service_id , @services_list  %>
+  </p>
+  <p>
+    <%= f.label :belief %><br />
+    <%= f.text_field :belief %>
+  </p>
+  <p>
+    <%= f.label :disbelief %><br />
+    <%= f.text_field :disbelief %>
+  </p>
+  <p>
+    <%= f.label :uncertainty %><br />
+    <%= f.text_field :uncertainty %>
+  </p>
+  <p>
+    <%= f.submit 'Stwórz opinie' %>
+  </p>
+<% end %>

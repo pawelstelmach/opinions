@@ -1,0 +1,26 @@
+<% title "Opiniia o usłudze #{@opinion.service_id}"  %>
+<%= link_to 'Edytuj', edit_opinion_path(@opinion) %>
+<p>
+  <b>Agent:</b>
+  <%=h @opinion.agent_id %>
+</p>
+
+<p>
+  <b>Service:</b>
+  <%=h @opinion.service_id %>
+</p>
+
+<p>
+  <b>Belief:</b>
+  <%=h @opinion.belief %>
+</p>
+
+<p>
+  <b>Disbelief:</b>
+  <%=h @opinion.disbelief %>
+</p>
+
+<p>
+  <b>Uncertainty:</b>
+  <%=h @opinion.uncertainty %>
+</p>

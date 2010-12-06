@@ -1,0 +1,31 @@
+<% title "Edycja opinii" %>
+<h1>Edycja opinii</h1>
+<%= link_to 'Pokaż', @opinion %>
+<% form_for(@opinion) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Agent %><br />
+    <%= f.select :agent_id, @agents %>
+  </p>
+  <p>
+    <%= f.label :Usługa %><br />
+    <%= f.select :service_id , @services  %>
+  </p>
+  <p>
+    <%= f.label :belief %><br />
+    <%= f.text_field :belief %>
+  </p>
+  <p>
+    <%= f.label :disbelief %><br />
+    <%= f.text_field :disbelief %>
+  </p>
+  <p>
+    <%= f.label :uncertainty %><br />
+    <%= f.text_field :uncertainty %>
+  </p>
+  <p>
+    <%= f.submit 'Aktualizuj opinie' %>
+  </p>
+<% end %>
+

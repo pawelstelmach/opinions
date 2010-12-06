@@ -1,0 +1,37 @@
+<% title "Agenci" %>
+<div id="pokaz_kompozycje">
+	<h2><%= link_to "Prezentacja działania", "#", :id => "toogle_tutorial", :style => "text-decoration:none; color: #000000;" %></h2>
+	<div id="tutorial" style="text-align:center;"></div>
+</div>
+<br/>
+<%= link_to 'Nowy agent', new_agent_path %>
+<br /><br />
+<table>
+  <tr>
+    <th><label>Nazwa</label></th>
+    <th><label>Belief</label></th>
+    <th><label>Disbelief</label></th>
+    <th><label>Uncertainty</label></th>
+	<th><label>Opcje</label></th>
+  </tr>
+
+<% @agents.each do |agent| %>
+  <tr>
+    <td><%=h agent.name %></td>
+    <td><%=h agent.belief %></td>
+    <td><%=h agent.disbelief %></td>
+    <td><%=h agent.uncertainty %></td>
+    <td style="text-align:center;"><%= link_to 'Pokaż', agent %> | <%= link_to 'Edytuj', edit_agent_path(agent) %> | <%= link_to 'Usuń', agent, :confirm => 'Jesteś pewien?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= javascript_tag("
+     $j(document).ready(function() {
+        $j('#tutorial').hide();
+		new Ajax.Updater('tutorial', '/pages/get_photo/0/Agents', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=')})
+        $j('a#toogle_tutorial').click(function() {
+		$j('#tutorial').slideToggle(400);
+		  return false;
+        });
+      });
+") %>

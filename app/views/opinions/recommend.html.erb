@@ -1,0 +1,16 @@
+<% title "Rekomendacja" %>
+<p>Wynik rekomendacji opinii o usłudze <%=@opinion.service_id%> (<<%=@opinion.belief %>, <%=@opinion.disbelief %>, <%=@opinion.uncertainty %>>) od agenta <%=@opinion.agent.name%> (<<%=@opinion.agent.belief %>, <%=@opinion.agent.disbelief %>, <%=@opinion.agent.uncertainty %>>)</p>
+<p>
+  <b>Belief:</b>
+  <%=h @recommendation.belief %>
+</p>
+
+<p>
+  <b>Disbelief:</b>
+  <%=h @recommendation.disbelief %>
+</p>
+
+<p>
+  <b>Uncertainty:</b>
+  <%=h @recommendation.uncertainty %>
+</p>

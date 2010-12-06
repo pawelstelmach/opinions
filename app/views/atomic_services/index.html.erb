@@ -1,0 +1,22 @@
+<h1>Listing atomic_services</h1>
+
+<table>
+  <tr>
+    <th>Service</th>
+    <th>Complex service</th>
+  </tr>
+
+<% @atomic_services.each do |atomic_service| %>
+  <tr>
+    <td><%=h atomic_service.service_id %></td>
+    <td><%=h atomic_service.complex_service_id %></td>
+    <td><%= link_to 'Show', atomic_service %></td>
+    <td><%= link_to 'Edit', edit_atomic_service_path(atomic_service) %></td>
+    <td><%= link_to 'Destroy', atomic_service, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New atomic_service', new_atomic_service_path %>

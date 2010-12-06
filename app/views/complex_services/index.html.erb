@@ -1,0 +1,27 @@
+<h1>Listing complex_services</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Belief</th>
+    <th>Disbelief</th>
+    <th>Uncertainty</th>
+  </tr>
+
+<% @complex_services.each do |complex_service| %>
+  <tr>
+    <td><%=h complex_service.name %></td>
+    <td><%=h complex_service.belief %></td>
+    <td><%=h complex_service.disbelief %></td>`
+    <td><%=h complex_service.uncertainty %></td>
+    <td><%= link_to 'get Opinion', opinion_complex_service_url(complex_service.id) %></td>
+    <td><%= link_to 'Show', complex_service %></td>
+    <td><%= link_to 'Edit', edit_complex_service_path(complex_service) %></td>
+    <td><%= link_to 'Destroy', complex_service, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New complex_service', new_complex_service_path %>

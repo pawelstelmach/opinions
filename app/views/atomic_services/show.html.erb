@@ -1,0 +1,13 @@
+<p>
+  <b>Service:</b>
+  <%=h @atomic_service.service_id %>
+</p>
+
+<p>
+  <b>Complex service:</b>
+  <%=h @atomic_service.complex_service_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_atomic_service_path(@atomic_service) %> |
+<%= link_to 'Back', atomic_services_path %>

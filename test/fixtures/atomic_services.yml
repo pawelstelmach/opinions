@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  service_id: 1
+  complex_service_id: 1
+
+two:
+  service_id: 1
+  complex_service_id: 1

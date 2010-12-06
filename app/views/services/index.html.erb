@@ -1,0 +1,15 @@
+<h1>Usługi</h1>
+
+<table>
+  <tr>
+    <th><label>Nazwa</label></th>
+  </tr>
+
+<% @services.each do |service| %>
+  <tr>
+    <td><%=h service.name %></td>
+	<td><%= link_to 'Consensus', consensus_service_url(:id=>service.id) %></td>
+    <td><%= link_to 'Pokaż', service %></td>
+  </tr>
+<% end %>
+</table>
