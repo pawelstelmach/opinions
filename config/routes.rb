@@ -10,9 +10,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :services
 
-  map.resources :agents
+  map.resources :agents, :collection => { :parse_csv => :post }
 
-  map.resources :opinions
+  map.resources :opinions, :collection => { :parse_csv => :post }
 
   map.get_opinion 'get_opinion', :controller => 'opinions', :action => 'get_opinion', :format => 'xml'
   

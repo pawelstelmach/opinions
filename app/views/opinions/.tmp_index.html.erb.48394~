@@ -36,15 +36,6 @@
 <div id="csv">
 <%= render :partial => 'new_opinions_from_file' %>
 </div>
-<%= javascript_tag("
-     $j(document).ready(function() {
-        $j('#csv').hide();
-		$j('a#toggle_csv').click(function() {
-		$j('#csv').slideToggle(400);
-		  return false;
-        });
-      });
-") %>
 
 <%= javascript_tag("
      $j(document).ready(function() {
@@ -57,3 +48,12 @@
       });
 ") %>
 
+<%= javascript_tag("
+     $j(document).ready(function() {
+        $j('#csv').hide();
+		$j('a#toggle_csv').click(function() {
+		$j('#csv').slideToggle(400);
+		  return false;
+        });
+      });
+") %>

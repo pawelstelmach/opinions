@@ -84,4 +84,19 @@ class AgentsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def parse_csv
+    Agent.delete_all
+    params[:csv].each_line do |line|
+      a_name, a_belief, a_disbelief, a_uncertainty = line.strip.split(';')
+      
+      Agent.create( 
+          :name => a_name,
+          :belief => a_belief,
+          :disbelief => a_disbelief,
+          :uncertainty => a_uncertainty)
+    end
+    redirect_to agents_path
+  end
+  
 end

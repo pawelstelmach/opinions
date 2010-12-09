@@ -101,6 +101,25 @@ class OpinionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+    def parse_csv
+    Opinion.delete_all
+    agents = Agent.all
+    agents_table = agents.inject({}) {|h,i| h[i.name] = i.id; h}
+    services = Service.find(:all)
+    services_table = services.inject({}) {|h, i| h[i.name] = i.id; h}
+    params[:csv].each_line do |line|
+      o_agent, o_service, o_belief, o_disbelief, o_uncertainty = line.strip.split(';')
+      
+      Opinion.create( 
+          :agent_id => agents_table[o_agent],
+          :service_id => services_table[o_service],
+          :belief => o_belief,
+          :disbelief => o_disbelief,
+          :uncertainty => o_uncertainty)
+    end
+    redirect_to opinions_path
+  end
 
 def get_opinion
     atomic_service_array = Hash.from_xml(params["complex_service"])['services'].to_a

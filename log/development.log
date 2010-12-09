@@ -31744,3 +31744,1904 @@ ActionController::RoutingError (No route matches "/images/arrow_last.png" with {
   C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:28:52) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:30:28) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (0.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:30:33) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (205.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:33:26) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (0.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (0.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:34:54) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:35:01) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (202.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:35:03) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:36:22) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;36;1mAgent Load (2.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (176.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:38:45) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:49:36) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (431.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:49:39) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (180.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:53:01) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 01:53:09) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>271</id>\n  </service>\n  <service>\n    <id>272</id>\n  </service>\n  <service>\n    <id>275</id>\n  </service>\n  <service>\n    <id>276</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 271) [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 272) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 275) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "agents" WHERE ("agents"."id" = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 276) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (206.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 02:57:07) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>370</id>\n  </service>\n  <service>\n    <id>371</id>\n  </service>\n  <service>\n    <id>374</id>\n  </service>\n  <service>\n    <id>375</id>\n  </service>\n</services>\n"}
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 370) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#get_opinion to xml (for 127.0.0.1 at 2010-12-09 02:57:10) [POST]
+  Parameters: {"complex_service"=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<services type=\"array\">\n  <service>\n    <id>370</id>\n  </service>\n  <service>\n    <id>371</id>\n  </service>\n  <service>\n    <id>374</id>\n  </service>\n  <service>\n    <id>375</id>\n  </service>\n</services>\n"}
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."service_id" = 370) [0m
+
+NoMethodError (undefined method `recommend' for nil:NilClass):
+  app/models/service.rb:7:in `consensus'
+  app/models/complex_service.rb:22:in `get_opinion_about'
+  app/models/complex_service.rb:21:in `each'
+  app/models/complex_service.rb:21:in `get_opinion_about'
+  app/controllers/opinions_controller.rb:114:in `get_opinion'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#index to xml (for 127.0.0.1 at 2010-12-09 14:37:25) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+
+Errno::ECONNREFUSED (Nie mo¿na nawi¹zaæ po³¹czenia, poniewa¿ komputer docelowy aktywnie go odmawia. - connect(2)):
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `initialize'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `open'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `connect'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:62:in `timeout'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `connect'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:553:in `do_start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:542:in `start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:1035:in `request'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:772:in `get'
+  app/controllers/opinions_controller.rb:8:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (101.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:37:39) [GET]
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Completed in 11943ms (View: 11874, DB: 1) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:37:52) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 81ms (View: 76, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#new (for 127.0.0.1 at 2010-12-09 14:37:57) [GET]
+Rendering template within layouts/application
+Rendering agents/new
+Completed in 66ms (View: 48, DB: 0) | 200 OK [http://localhost/agents/new]
+
+
+Processing OpinionsController#index to xml (for 127.0.0.1 at 2010-12-09 14:38:06) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+
+Errno::ECONNREFUSED (Nie mo¿na nawi¹zaæ po³¹czenia, poniewa¿ komputer docelowy aktywnie go odmawia. - connect(2)):
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `initialize'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `open'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `connect'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:62:in `timeout'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `connect'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:553:in `do_start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:542:in `start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:1035:in `request'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:772:in `get'
+  app/controllers/opinions_controller.rb:8:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:38:12) [GET]
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Completed in 53ms (View: 32, DB: 1) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:38:12) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 14:38:15) [GET]
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+
+Errno::ECONNREFUSED (Nie mo¿na nawi¹zaæ po³¹czenia, poniewa¿ komputer docelowy aktywnie go odmawia. - connect(2)):
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `initialize'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `open'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `connect'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:62:in `timeout'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:560:in `connect'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:553:in `do_start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:542:in `start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:1035:in `request'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:772:in `get'
+  app/controllers/opinions_controller.rb:8:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (111.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:39:01) [GET]
+  [4;35;1mAgent Load (2.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Completed in 45ms (View: 28, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:39:03) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 14:39:03) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (32.0ms)
+Completed in 2445ms (View: 353, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:39:06) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 14:39:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 14:39:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:39:21) [GET]
+  [4;36;1mAgent Load (2.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Completed in 61ms (View: 38, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:39:21) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:53:05) [GET]
+  [4;36;1mAgent Load (2.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Completed in 266ms (View: 68, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:53:07) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 36ms (View: 29, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:53:29) [GET]
+  [4;36;1mAgent Load (2.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Completed in 268ms (View: 69, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:53:30) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 37ms (View: 32, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:55:18) [GET]
+  [4;36;1mAgent Load (2.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (4.0ms)
+Completed in 278ms (View: 82, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:55:20) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 37ms (View: 30, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#parse_csv (for 127.0.0.1 at 2010-12-09 14:55:54) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;1.0;0;0;\r\nB;0.95;0;0.05;"}
+  [4;35;1mAgent Delete all (156.0ms)[0m   [0mDELETE FROM "agents" WHERE 1=1[0m
+  [4;36;1mAgent Create (3.0ms)[0m   [0;1mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('A', 1.0, '2010-12-09 13:55:54', 0.0, 0.0, '2010-12-09 13:55:54')[0m
+  [4;35;1mAgent Create (5.0ms)[0m   [0mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('B', 0.95, '2010-12-09 13:55:54', 0.05, 0.0, '2010-12-09 13:55:54')[0m
+Redirected to http://localhost:3000/agents
+Completed in 393ms (DB: 164) | 302 Found [http://localhost/agents/parse_csv]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:55:55) [GET]
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (2.0ms)
+Completed in 50ms (View: 32, DB: 1) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:55:56) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#parse_csv (for 127.0.0.1 at 2010-12-09 14:56:39) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;1;0;0;\r\nB;0.95;0;0.05;\r\nC;0.9;0.05;0.05;"}
+  [4;35;1mAgent Delete all (151.0ms)[0m   [0mDELETE FROM "agents" WHERE 1=1[0m
+  [4;36;1mAgent Create (2.0ms)[0m   [0;1mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('A', 1.0, '2010-12-09 13:56:39', 0.0, 0.0, '2010-12-09 13:56:39')[0m
+  [4;35;1mAgent Create (4.0ms)[0m   [0mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('B', 0.95, '2010-12-09 13:56:39', 0.05, 0.0, '2010-12-09 13:56:39')[0m
+  [4;36;1mAgent Create (4.0ms)[0m   [0;1mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('C', 0.9, '2010-12-09 13:56:39', 0.05, 0.05, '2010-12-09 13:56:39')[0m
+Redirected to http://localhost:3000/agents
+Completed in 516ms (DB: 161) | 302 Found [http://localhost/agents/parse_csv]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 14:56:39) [GET]
+  [4;35;1mAgent Load (2.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (2.0ms)
+Completed in 55ms (View: 38, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:56:41) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 14:57:08) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (33.0ms)
+Completed in 1319ms (View: 138, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 14:57:10) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 14:57:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 14:57:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:06:59) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (17.0ms)
+
+ActionView::TemplateError (Missing template opinions/_new_opinion_from_file.erb in view path app/views) on line #35 of app/views/opinions/index.html.erb:
+32: <br />
+33: <%= render :partial => 'new', :locals => {:new_opinion => Opinion.new } %>
+34: 
+35: <%= render :partial => 'new_opinion_from_file' %>
+36: 
+37: <%= javascript_tag("
+38:      $j(document).ready(function() {
+
+    app/views/opinions/index.html.erb:35
+    app/controllers/opinions_controller.rb:15:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:07:54) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (15.0ms)
+Rendered opinions/_new_opinions_from_file (4.0ms)
+Completed in 1222ms (View: 255, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:07:57) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 49ms (View: 43, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:07:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:07:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#create (for 127.0.0.1 at 2010-12-09 15:08:30) [POST]
+  Parameters: {"commit"=>"StwÃ³rz opinie", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "opinion"=>{"belief"=>"", "service_id"=>"358", "uncertainty"=>"", "disbelief"=>"", "agent_id"=>"5"}}
+  [4;36;1mOpinion Create (2.0ms)[0m   [0;1mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(NULL, '2010-12-09 14:08:30', 358, NULL, NULL, 5, '2010-12-09 14:08:30')[0m
+Redirected to http://localhost:3000/opinions
+Completed in 190ms (DB: 2) | 302 Found [http://localhost/opinions]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:08:30) [GET]
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM "opinions" [0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (16.0ms)
+Rendered opinions/_new_opinions_from_file (2.0ms)
+Completed in 956ms (View: 81, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:08:32) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:08:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:08:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:08:36) [GET]
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM "opinions" [0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (20.0ms)
+Rendered opinions/_new_opinions_from_file (3.0ms)
+Completed in 1219ms (View: 92, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:08:38) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:08:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:08:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#destroy (for 127.0.0.1 at 2010-12-09 15:08:42) [DELETE]
+  Parameters: {"authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "id"=>"17"}
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" WHERE ("opinions"."id" = 17) [0m
+  [4;36;1mOpinion Destroy (2.0ms)[0m   [0;1mDELETE FROM "opinions" WHERE "id" = 17[0m
+Redirected to http://localhost:3000/opinions
+Completed in 660ms (DB: 3) | 302 Found [http://localhost/opinions/17]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:08:43) [GET]
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM "opinions" [0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (22.0ms)
+Rendered opinions/_new_opinions_from_file (3.0ms)
+Completed in 1103ms (View: 88, DB: 2) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:08:45) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:08:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:08:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:09:26) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;zamow_urz_glos;0.9;0.05;0.05;"}
+  [4;35;1mAgent Delete all (217.0ms)[0m   [0mDELETE FROM "agents" WHERE 1=1[0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" WHERE ("agents"."name" = 'A') LIMIT 1[0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/opinions_controller.rb:113:in `parse_csv'
+  app/controllers/opinions_controller.rb:109:in `each_line'
+  app/controllers/opinions_controller.rb:109:in `parse_csv'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:12:24) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (14.0ms)
+Rendered opinions/_new_opinions_from_file (4.0ms)
+Completed in 1296ms (View: 258, DB: 2) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:12:27) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 50ms (View: 44, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:12:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:12:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 15:13:51) [GET]
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (5.0ms)
+Completed in 59ms (View: 42, DB: 1) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:13:53) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:14:20) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;1;0;0;\r\nB;0.95;0;0.05;\r\nC;0.9;0.05;0.05;"}
+  [4;35;1mAgent Delete all (1.0ms)[0m   [0mDELETE FROM "agents" WHERE 1=1[0m
+  [4;36;1mAgent Create (2.0ms)[0m   [0;1mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('A', 1.0, '2010-12-09 14:14:20', 0.0, 0.0, '2010-12-09 14:14:20')[0m
+  [4;35;1mAgent Create (5.0ms)[0m   [0mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('B', 0.95, '2010-12-09 14:14:20', 0.05, 0.0, '2010-12-09 14:14:20')[0m
+  [4;36;1mAgent Create (2.0ms)[0m   [0;1mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('C', 0.9, '2010-12-09 14:14:20', 0.05, 0.05, '2010-12-09 14:14:20')[0m
+Redirected to http://localhost:3000/agents
+Completed in 719ms (DB: 10) | 302 Found [http://localhost/agents/parse_csv]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 15:14:21) [GET]
+  [4;35;1mAgent Load (2.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (3.0ms)
+Completed in 71ms (View: 47, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:14:21) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:14:23) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (31.0ms)
+Rendered opinions/_new_opinions_from_file (2.0ms)
+Completed in 1279ms (View: 104, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:14:25) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:14:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:14:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:14:50) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;zamow_urz_glos;1;0;0;"}
+
+NameError (uninitialized constant OpinionsController::Opinions):
+  app/controllers/opinions_controller.rb:106:in `parse_csv'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:15:20) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;zamow_urz_glos;1;0;0;"}
+  [4;36;1mOpinion Delete all (173.0ms)[0m   [0;1mDELETE FROM "opinions" WHERE 1=1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.collect):
+  app/controllers/opinions_controller.rb:107:in `parse_csv'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#show (for 127.0.0.1 at 2010-12-09 15:16:30) [GET]
+  Parameters: {"id"=>"parse_csv"}
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Opinion with ID=parse_csv):
+  app/controllers/opinions_controller.rb:31:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:16:35) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;zamow_urz_glos;1;0;0;"}
+  [4;35;1mOpinion Delete all (1.0ms)[0m   [0mDELETE FROM "opinions" WHERE 1=1[0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+
+NameError (undefined local variable or method `service_table' for #<OpinionsController:0x7833dc4>):
+  app/controllers/opinions_controller.rb:116:in `parse_csv'
+  app/controllers/opinions_controller.rb:111:in `each_line'
+  app/controllers/opinions_controller.rb:111:in `parse_csv'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpinionsController#show (for 127.0.0.1 at 2010-12-09 15:17:14) [GET]
+  Parameters: {"id"=>"parse_csv"}
+  [4;36;1mOpinion Load (0.0ms)[0m   [0;1mSELECT * FROM "opinions" WHERE ("opinions"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Opinion with ID=parse_csv):
+  app/controllers/opinions_controller.rb:31:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:17:18) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;zamow_urz_glos;1;0;0;"}
+  [4;35;1mOpinion Delete all (2.0ms)[0m   [0mDELETE FROM "opinions" WHERE 1=1[0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+  [4;35;1mOpinion Create (2.0ms)[0m   [0mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(1.0, '2010-12-09 14:17:19', 374, 0.0, 0.0, 8, '2010-12-09 14:17:19')[0m
+Redirected to http://localhost:3000/agents
+Completed in 1161ms (DB: 5) | 302 Found [http://localhost/opinions/parse_csv]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 15:17:20) [GET]
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (5.0ms)
+Completed in 105ms (View: 87, DB: 1) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:17:21) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 48ms (View: 41, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:17:24) [GET]
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM "opinions" [0m
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (36.0ms)
+Rendered opinions/_new_opinions_from_file (6.0ms)
+Completed in 1419ms (View: 128, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:17:26) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:18:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:19:06) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;zamow_urz_glos;1;0;0;\r\nB;zamow_urz_glos;0.9;0.05;0.05;\r\nC;zamow_urz_glos;0.9;0;0.1;\r\nA;zamow_urz;1;0;0;\r\nB;zamow_urz;0.9;0.05;0.05;\r\nC;zamow_urz;0.9;0;0.1;"}
+  [4;36;1mOpinion Delete all (140.0ms)[0m   [0;1mDELETE FROM "opinions" WHERE 1=1[0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+  [4;36;1mOpinion Create (2.0ms)[0m   [0;1mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(1.0, '2010-12-09 14:19:07', 374, 0.0, 0.0, 8, '2010-12-09 14:19:07')[0m
+  [4;35;1mOpinion Create (4.0ms)[0m   [0mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:19:08', 374, 0.05, 0.05, 9, '2010-12-09 14:19:08')[0m
+  [4;36;1mOpinion Create (2.0ms)[0m   [0;1mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:19:08', 374, 0.1, 0.0, 10, '2010-12-09 14:19:08')[0m
+  [4;35;1mOpinion Create (2.0ms)[0m   [0mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(1.0, '2010-12-09 14:19:08', 373, 0.0, 0.0, 8, '2010-12-09 14:19:08')[0m
+  [4;36;1mOpinion Create (2.0ms)[0m   [0;1mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:19:08', 373, 0.05, 0.05, 9, '2010-12-09 14:19:08')[0m
+  [4;35;1mOpinion Create (5.0ms)[0m   [0mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:19:08', 373, 0.1, 0.0, 10, '2010-12-09 14:19:08')[0m
+Redirected to http://localhost:3000/opinions
+Completed in 1768ms (DB: 158) | 302 Found [http://localhost/opinions/parse_csv]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:19:08) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (16.0ms)
+Rendered opinions/_new_opinions_from_file (5.0ms)
+Completed in 1024ms (View: 265, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:19:11) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 60ms (View: 54, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:19:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:19:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:19:27) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 23ms (View: 16, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:19:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:19:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:19:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:19:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:24:00) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (137.0ms)
+Rendered opinions/_new_opinions_from_file (5.0ms)
+Completed in 1231ms (View: 263, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:24:03) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:24:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:24:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:26:25) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (18.0ms)
+Rendered opinions/_new_opinions_from_file (2.0ms)
+Completed in 976ms (View: 99, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:26:28) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:26:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:26:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 15:26:29) [GET]
+  [4;36;1mAgent Load (2.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (5.0ms)
+Completed in 94ms (View: 73, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:26:30) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:26:30) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:26:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:26:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 15:28:57) [GET]
+  [4;36;1mAgent Load (1.0ms)[0m   [0;1mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (4.0ms)
+Completed in 289ms (View: 91, DB: 1) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:28:58) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing AgentsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:29:07) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;1;0;0;\r\nB;0.95;0;0.05;\r\nC;0.9;0.05;0.05;"}
+  [4;35;1mAgent Delete all (296.0ms)[0m   [0mDELETE FROM "agents" WHERE 1=1[0m
+  [4;36;1mAgent Create (4.0ms)[0m   [0;1mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('A', 1.0, '2010-12-09 14:29:07', 0.0, 0.0, '2010-12-09 14:29:07')[0m
+  [4;35;1mAgent Create (4.0ms)[0m   [0mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('B', 0.95, '2010-12-09 14:29:07', 0.05, 0.0, '2010-12-09 14:29:07')[0m
+  [4;36;1mAgent Create (5.0ms)[0m   [0;1mINSERT INTO "agents" ("name", "belief", "updated_at", "uncertainty", "disbelief", "created_at") VALUES('C', 0.9, '2010-12-09 14:29:08', 0.05, 0.05, '2010-12-09 14:29:08')[0m
+Redirected to http://localhost:3000/agents
+Completed in 942ms (DB: 309) | 302 Found [http://localhost/agents/parse_csv]
+
+
+Processing AgentsController#index (for 127.0.0.1 at 2010-12-09 15:29:08) [GET]
+  [4;35;1mAgent Load (2.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering agents/index
+Rendered agents/_new_agent_from_file (2.0ms)
+Completed in 68ms (View: 47, DB: 2) | 200 OK [http://localhost/agents]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:29:09) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Agents"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Agents]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:29:10) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (27.0ms)
+Rendered opinions/_new_opinions_from_file (5.0ms)
+Completed in 2202ms (View: 260, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:29:12) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:29:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:29:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#parse_csv (for 127.0.0.1 at 2010-12-09 15:29:23) [POST]
+  Parameters: {"commit"=>"Parsuj csv", "authenticity_token"=>"Af5nweTD9HNqqjjNFL5K297sDKFri2rfVGp0JY9z0gw=", "csv"=>"A;zamow_urz_glos;1;0;0;\r\nB;zamow_urz_glos;0.9;0.05;0.05;\r\nC;zamow_urz_glos;0.9;0;0.1;\r\nA;zamow_urz;1;0;0;\r\nB;zamow_urz;0.9;0.05;0.05;\r\nC;zamow_urz;0.9;0;0.1;"}
+  [4;36;1mOpinion Delete all (153.0ms)[0m   [0;1mDELETE FROM "opinions" WHERE 1=1[0m
+  [4;35;1mAgent Load (2.0ms)[0m   [0mSELECT * FROM "agents" [0m
+  [4;36;1mOpinion Create (2.0ms)[0m   [0;1mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(1.0, '2010-12-09 14:29:24', 374, 0.0, 0.0, 11, '2010-12-09 14:29:24')[0m
+  [4;35;1mOpinion Create (2.0ms)[0m   [0mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:29:24', 374, 0.05, 0.05, 12, '2010-12-09 14:29:24')[0m
+  [4;36;1mOpinion Create (2.0ms)[0m   [0;1mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:29:24', 374, 0.1, 0.0, 13, '2010-12-09 14:29:24')[0m
+  [4;35;1mOpinion Create (4.0ms)[0m   [0mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(1.0, '2010-12-09 14:29:24', 373, 0.0, 0.0, 11, '2010-12-09 14:29:24')[0m
+  [4;36;1mOpinion Create (4.0ms)[0m   [0;1mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:29:25', 373, 0.05, 0.05, 12, '2010-12-09 14:29:25')[0m
+  [4;35;1mOpinion Create (4.0ms)[0m   [0mINSERT INTO "opinions" ("belief", "updated_at", "service_id", "uncertainty", "disbelief", "agent_id", "created_at") VALUES(0.9, '2010-12-09 14:29:25', 373, 0.1, 0.0, 13, '2010-12-09 14:29:25')[0m
+Redirected to http://localhost:3000/opinions
+Completed in 1958ms (DB: 173) | 302 Found [http://localhost/opinions/parse_csv]
+
+
+Processing OpinionsController#index (for 127.0.0.1 at 2010-12-09 15:29:25) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Rendering template within layouts/application
+Rendering opinions/index
+Rendered opinions/_new (20.0ms)
+Rendered opinions/_new_opinions_from_file (3.0ms)
+Completed in 1095ms (View: 95, DB: 3) | 200 OK [http://localhost/opinions]
+
+
+Processing PagesController#get_photo (for 127.0.0.1 at 2010-12-09 15:29:27) [POST]
+  Parameters: {"authenticity_token"=>"r4Zxnv4m0jgTfZpMqpoj44hFkzxsmNd/8rRcGbkfoVw=", "id"=>"0", "site"=>"Opinions"}
+Rendering template within layouts/empty
+Rendering pages/get_photo
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/pages/get_photo/0/Opinions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:29:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_last.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-09 15:29:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/arrow_next.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpinionsController#index to xml (for 127.0.0.1 at 2010-12-09 15:29:41) [GET]
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM "opinions" [0m
+  [4;35;1mAgent Load (1.0ms)[0m   [0mSELECT * FROM "agents" [0m
+Completed in 1039ms (View: 52, DB: 3) | 200 OK [http://localhost/]
