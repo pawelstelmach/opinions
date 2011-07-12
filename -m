@@ -1,0 +1,14 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Agent" [shape=Mrecord, label="{Agent|name :string\lbelief :float\ldisbelief :float\luncertainty :float\l}"]
+	"AtomicService" [shape=Mrecord, label="{AtomicService|\l}"]
+	"ComplexService" [shape=Mrecord, label="{ComplexService|name :string\lbelief :float\ldisbelief :float\luncertainty :float\l}"]
+	"Opinion" [shape=Mrecord, label="{Opinion|belief :float\ldisbelief :float\luncertainty :float\l}"]
+	"SecurityOpinion" [shape=record, label="{SecurityOpinion|}"]
+	"Service" [shape=record, label="{Service|}"]
+	"Agent" -> "Opinion" [arrowtail=crow, arrowhead=dot, dir=both]
+	"ComplexService" -> "Service" [arrowtail=crow, arrowhead=crow, dir=both]
+	"ComplexService" -> "AtomicService" [arrowtail=crow, arrowhead=dot, dir=both]
+	"ActionWebService::Struct" -> "SecurityOpinion" [label="", arrowhead="none", arrowtail="onormal"]
+	"ActiveResource::Base" -> "Service" [label="", arrowhead="none", arrowtail="onormal"]
+}

@@ -14,7 +14,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :opinions, :collection => { :parse_csv => :post }
 
-  map.get_opinion 'get_opinion', :controller => 'opinions', :action => 'get_opinion', :format => 'xml'
+  map.get_opinion '/get_opinion', :controller => 'opinion', :action => 'get_opinion'
+  map.get_opinion '/wsdl', :controller => 'opinion', :action => 'wsdl'
   
   map.connect "/pages/get_photo/:id/:site", :controller => 'pages', :action => 'get_photo'
   
